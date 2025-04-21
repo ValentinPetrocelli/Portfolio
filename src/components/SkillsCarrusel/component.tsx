@@ -28,21 +28,21 @@ const SkillsCarrusel = () => {
     return (
         <div className="overflow-hidden bg-neutral-900 py-4">
             <motion.div
-                className="flex gap-6 text-white"
+                className="flex gap-6 text-white  w-max"
                 animate={{
-                    x: ["-100%", "100%"]
+                    x: ["-100%", "0%"]
                 }}
                 transition={{
                     x: {
                     repeat: Infinity,
                     repeatType: "loop",
-                    duration: 15,
+                    duration: 30,
                     ease: "linear",
                     }
                 }}
                 >
-                {icons.map((Icon, index) => (
-                    <Icon key={index} className="text-[5rem]" />
+                {[...icons, ...icons].map((Icon, index) => (
+                    <Icon key={index} className="w-[1.5rem] h-[1.5rem] md:w-[1.8rem] md:h-[1.8rem] flex-shrink-0" />
                 ))}
             </motion.div>
         </div>

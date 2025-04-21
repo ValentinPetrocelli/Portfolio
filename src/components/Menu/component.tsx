@@ -25,11 +25,11 @@ const Menu = () => {
     // Render
     return (
         <div
-        className={`fixed top-0 w-full pt-4 z-50 transition-transform duration-500 ${
+        className={`fixed w-[19rem] lg:w-[25rem] top-0 pt-4 z-50 transition-transform duration-500 ${
             showMenu ? "translate-y-0" : "-translate-y-full"
-        } flex justify-center`}
+        }`}
         >
-            <Menubar className="flex justify-center w-110 bg-neutral-900/95 rounded shadow font-semibold text-neutral-100 text-[1.3rem]">
+            <Menubar className="flex justify-center bg-neutral-900/95 rounded shadow font-semibold text-neutral-100 text-[0.8rem] lg:text-[1rem]">
                 <MenubarMenu>
                     <MenubarTrigger asChild>
                         <a href="#about" className="cursor-pointer text-weigth-500 px-4 py-2 hover:bg-neutral-800 rounded">

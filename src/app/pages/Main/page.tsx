@@ -9,8 +9,8 @@ export const MainPage = () => {
         <>
             <Home />
             <About />
-            <Projects />
-            <Contact />
+            {/* <Projects />
+            <Contact /> */}
         </>
     );
 };

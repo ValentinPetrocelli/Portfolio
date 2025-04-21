@@ -107,7 +107,7 @@ const ContactForm = () => {
                 </form>
             </Form>
 
-            <div className="flex text-neutral-100 text-[1.5rem] pt-40">
+            <div className="flex gap-8 text-neutral-100 text-[1.5rem] pt-40">
                 <span>If you'd like to learn more about my experience and skills, you can access my LinkedIn profile by <a className="text-green-500 hover:underline" href={linkedInUrl} target="_blank">clicking here</a>.</span>
                 <FaLinkedin className="text-[5rem]" />
             </div>

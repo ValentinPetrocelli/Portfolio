@@ -28,8 +28,8 @@ const Home = () => {
                 <source src={backgroundVideo} type="video/mp4" />
             </video>
             
-            <div className="absolute top-[45%] bg-neutral-900/95 text-neutral-100 w-135 rounded">
-                <div className="p-8 text-[3rem]">
+            <div className="absolute top-[45%] bg-neutral-900/95 text-neutral-100 w-[15rem] sm:w-[30rem] max-w-135 rounded">
+                <div className="p-8 text-[1.2rem] sm:text-[2.5rem]">
                     <span>Valentin Petrocelli:</span>
                     <div className="text-green-500">
                         <TypingText text={"Full Stack Developer"} speed={100} deleteSpeed={70} delay={30} />

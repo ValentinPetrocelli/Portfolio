@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
+import { IoIosSend } from "react-icons/io";
 import RenderFormButtonIcon from "@/utils/RenderFormButtonIcon";
 import emailjs from '@emailjs/browser';
 import { FaLinkedin } from "react-icons/fa";
@@ -57,7 +57,7 @@ const ContactForm = () => {
 
     // Render
     return (
-        <div className="w-[50%]">
+        <div className="w-[50%] h-full flex flex-col justify-between">
             <Form {...form}>
                 <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6">
                     <FormField
@@ -65,9 +65,9 @@ const ContactForm = () => {
                         name="name"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel className="text-[1.5rem] text-neutral-100">Name</FormLabel>
+                                <FormLabel className="text-[0.7rem] lg:text-[0.9rem] text-neutral-100">Name</FormLabel>
                                 <FormControl>
-                                    <Input className="pt-7 pb-7 !text-[1.4rem] text-neutral-100" placeholder="Your name" {...field} />
+                                    <Input className="pt-3 pb-3 !text-[0.6rem] lg:!text-[0.8rem] text-neutral-100" placeholder="Your name" {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -78,9 +78,9 @@ const ContactForm = () => {
                         name="email"
                         render={({ field }) => (
                             <FormItem>
-                            <FormLabel className="text-[1.5rem] text-neutral-100">Email</FormLabel>
+                            <FormLabel className="text-[0.7rem] lg:text-[0.9rem] text-neutral-100">Email</FormLabel>
                             <FormControl>
-                                <Input type="email" className="pt-7 pb-7 !text-[1.4rem] text-neutral-100" placeholder="Your email" {...field} />
+                                <Input type="email" className="pt-3 pb-3 !text-[0.6rem] lg:!text-[0.8rem] text-neutral-100" placeholder="Your email" {...field} />
                             </FormControl>
                             <FormMessage />
                             </FormItem>
@@ -92,24 +92,24 @@ const ContactForm = () => {
                         name="message"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel className="text-[1.5rem] text-neutral-100">Message</FormLabel>
+                                <FormLabel className="text-[0.7rem] lg:text-[0.9rem] text-neutral-100">Message</FormLabel>
                                 <FormControl>
-                                    <Textarea className=" h-[10rem] !text-[1.4rem] text-neutral-100" placeholder="Write your message..." rows={5} {...field} />
+                                    <Textarea className=" h-[5rem] !text-[0.6rem] lg:!text-[0.8rem] text-neutral-100" placeholder="Write your message..." rows={5} {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
 
-                    <Button className="w-[30%] p-6 bg-neutral-900 text-green-500 border" type="submit" disabled={status === "loading"}>
-                        {status === "idle" ? <Send size={100} /> : RenderFormButtonIcon(status)}
+                    <Button className="w-[30%] bg-neutral-900 text-green-500 border" type="submit" disabled={status === "loading"}>
+                        {status === "idle" ? <IoIosSend /> : RenderFormButtonIcon(status)}
                     </Button>
                 </form>
             </Form>
 
-            <div className="flex gap-8 text-neutral-100 text-[1.5rem] pt-40">
+            <div className="flex items-center gap-1 lg:gap-5 text-neutral-100 text-[0.5rem] lg:text-[0.7rem] pt-4 pb-4">
                 <span>If you'd like to learn more about my experience and skills, you can access my LinkedIn profile by <a className="text-green-500 hover:underline" href={linkedInUrl} target="_blank">clicking here</a>.</span>
-                <FaLinkedin className="text-[5rem]" />
+                <FaLinkedin className="text-[5rem] md:text-[3rem]" />
             </div>
         </div>
     );

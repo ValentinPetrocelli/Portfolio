@@ -1,5 +1,6 @@
 import { Menubar, MenubarMenu, MenubarTrigger } from "@radix-ui/react-menubar";
 import { useEffect, useState } from "react";
+import { Link } from 'react-scroll';
 
 const Menu = () => {
     const [showMenu, setShowMenu] = useState(true);
@@ -32,23 +33,23 @@ const Menu = () => {
             <Menubar className="flex justify-center bg-neutral-900/95 rounded shadow font-semibold text-neutral-100 text-[0.8rem] lg:text-[1rem]">
                 <MenubarMenu>
                     <MenubarTrigger asChild>
-                        <a href="#about" className="cursor-pointer text-weigth-500 px-4 py-2 hover:bg-neutral-800 rounded">
+                        <Link to="about" smooth={true} duration={300} className="cursor-pointer text-weigth-500 px-4 py-2 hover:bg-neutral-800 rounded">
                             About me
-                        </a>
+                        </Link>
                     </MenubarTrigger>
                 </MenubarMenu>
                 <MenubarMenu>
                     <MenubarTrigger asChild>
-                        <a href="#projects" className="cursor-pointer px-4 py-2 hover:bg-neutral-800 rounded">
+                        <Link to="projects" smooth={true} duration={300} className="cursor-pointer px-4 py-2 hover:bg-neutral-800 rounded">
                             Projects
-                        </a>
+                        </Link>
                     </MenubarTrigger>
                 </MenubarMenu>
                 <MenubarMenu>
                     <MenubarTrigger asChild>
-                        <a href="#contact" className="cursor-pointer px-4 py-2 hover:bg-neutral-800 rounded">
+                        <Link to="contact" smooth={true} duration={300} className="cursor-pointer px-4 py-2 hover:bg-neutral-800 rounded">
                             Contact
-                        </a>
+                        </Link>
                     </MenubarTrigger>
                 </MenubarMenu>
             </Menubar>

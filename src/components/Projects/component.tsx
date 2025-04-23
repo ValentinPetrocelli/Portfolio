@@ -11,7 +11,7 @@ const projects = [
         image: PortfolioProyectImg,
         icons: [DiReact, SiTypescript, SiTailwindcss],
         repoUrl: "https://github.com/ValentinPetrocelli/Portfolio",
-        pageUrl: "https://miportfolio.com",
+        pageUrl: "https://valentinpetrocelli.vercel.app",
     }
 ];
 
